@@ -1,0 +1,14 @@
+Q1 What is the difference between session, tempdata, viewdata, and viewbag?
+
+tempdata, viewdata, and viewbag 主要是MVC Controller將資料傳遞給View時不透過ViewModel的傳遞方式
+1. viewdata:是類似於dictionary的方式，透過string key/ object value的方式傳遞物件。
+2. viewbag: 他與viewdata的差異在於它是動態型別變數，適用於傳遞複雜的物件。
+3. tempdata:傳遞方式同樣類似於viewdata，差別在於它是存放在session中而且有生命週期，一般情況下允許一次的跨Controller傳遞。
+4. session:是存放在server端，用來儲存使用者訊息。
+
+
+-------------------------------
+Question 2 What are the different types of action filters?
+1. OutputCatche：對於資料不常變動的網頁，可以設定快取與持續時間(Duration)，提升效能。
+2. HandleError：Controller資料傳遞時的錯誤處理
+3. Authorize：訪問時的身分與角色驗證
